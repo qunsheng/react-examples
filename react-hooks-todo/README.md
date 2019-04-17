@@ -1,5 +1,7 @@
 # React Hooks To-Do-App
 
+Example of useState hook
+
 ## Starting a React App
 
 Navigate to the place you would like your new application to be located and type:
@@ -8,7 +10,7 @@ Navigate to the place you would like your new application to be located and type
 
 Once it is done, you will need to navigate into the project:
 
-`cd react-hooks-tod`
+`cd react-hooks-todo`
 
 and then run the project:
 
