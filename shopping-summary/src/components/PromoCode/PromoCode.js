@@ -29,7 +29,6 @@ class PromoCodeDiscount extends Component {
       <div>
         <Button
           className="promo-code-button"
-          bsStyle="link"
           onClick={() => this.setState({ open: !this.state.open })}
         >
           {this.state.open === false ? `Apply ` : `Hide `}
@@ -51,7 +50,6 @@ class PromoCodeDiscount extends Component {
                 </Form.Group>{" "}
                 <Button
                   block
-                  bsStyle="success"
                   className="btn-round"
                   // type="submit"
                   disabled={this.props.isDisabled}

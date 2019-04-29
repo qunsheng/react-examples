@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <Container>
         <SubTotal price={this.state.total.toFixed(2)} />
-        <PickupSavings price={this.state.PickupSavings} />
+        <PickupSavings price={this.state.pickupSavings} />
         <TaxesFees taxes={this.state.taxes.toFixed(2)} />
         <hr />
         <EstimatedTotal price={this.state.estimatedTotal.toFixed(2)} />

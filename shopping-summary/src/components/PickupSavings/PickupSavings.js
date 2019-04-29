@@ -15,6 +15,12 @@ var styles = {
 };
 
 export default class PickupSavings extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      totalSavings: 3.85
+    };
+  }
   render() {
     const tooltip = (
       <Tooltip id="tooltip">
@@ -27,7 +33,7 @@ export default class PickupSavings extends Component {
     return (
       <Row className="show-grid">
         <Col md={6}>
-          <OverlayTrigger placement="bottom" overlay={Tooltip}>
+          <OverlayTrigger placement="bottom" overlay={tooltip}>
             <div style={StyleSheet.pickupSavings}>Pickup Savings</div>
           </OverlayTrigger>
         </Col>
