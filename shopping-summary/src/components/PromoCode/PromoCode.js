@@ -7,7 +7,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+// import FormControl from "react-bootstrap/FormControl";
+
+import { connect } from "react-redux";
+import { handleChange } from "../../actions/promoCodeActions";
 
 class PromoCodeDiscount extends Component {
   constructor(props, context) {
@@ -66,4 +69,11 @@ class PromoCodeDiscount extends Component {
   }
 }
 
-export default PromoCodeDiscount;
+const mapStateToProps = state => ({
+  promoCode: state.promoCode.value
+});
+
+export default connect(
+  mapStateToProps,
+  { handleChange }
+)(PromoCodeDiscount);
