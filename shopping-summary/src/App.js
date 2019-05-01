@@ -74,6 +74,10 @@ const mapStateToProps = state => ({
   promoCode: state.promoCode.value
 });
 
+// connect is high order component
+// it can take parameters
+// it will return a function
+// the returned function can still take parameters
 export default connect(
   mapStateToProps,
   {

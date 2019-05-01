@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { createPost } from '../actions/postActions';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createPost } from "../actions/postActions";
 
 class PostForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
-      body: ''
+      title: "",
+      body: ""
     };
 
     this.onChange = this.onChange.bind(this);
@@ -67,4 +67,11 @@ PostForm.propTypes = {
   createPost: PropTypes.func.isRequired
 };
 
-export default connect(null, { createPost })(PostForm);
+// connect is high order component
+// it can take parameters
+// it will return a function
+// the returned function can still take parameters
+export default connect(
+  null,
+  { createPost }
+)(PostForm);
