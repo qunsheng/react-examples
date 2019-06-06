@@ -1,3 +1,3 @@
 ## Custom Fetch Hook
 
-Create a custom React Hook that wraps on top of Fetch API.
+Example for useState, useEffect, create a custom React Hook, Fetch API, async, await.
