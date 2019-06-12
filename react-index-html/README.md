@@ -24,19 +24,19 @@ go to https://unpkg.com/react-dom and then https://unpkg.com/react-dom@16.8.6/ a
 
 add to index.html file.
 
-## test react
+## test react and react-dom
 
 `const rootEl = document.getElementById("root")`<br />
 `const element = React.createElement("span", {}, "SpAN!")`<br />
 `ReactDOM.render(element, rootEl)`
 
-## add babel
+## add babel to make jsx work
 
 go to https://unpkg.com/babel-standalone and then https://unpkg.com/babel-standalone@6.26.0/babel.js. <br />
 
 and add to index.html.
 
-## test jsx
+## change script type to text/babel and test jsx
 
 create elemnet using jsx, and then change script type to text/babel<br />
 `<script type="text/babel">`<br />
