@@ -26,8 +26,8 @@ add to index.html file.
 
 ## test react
 
-`const rootEl = document.getElementById("root")`
-`const element = React.createElement("span", {}, "SpAN!")`
+`const rootEl = document.getElementById("root")`<br />
+`const element = React.createElement("span", {}, "SpAN!")`v
 `ReactDOM.render(element, rootEl)`
 
 ## add babel
@@ -39,8 +39,8 @@ and add to index.html.
 ## test jsx
 
 create elemnet using jsx, and then change script type to text/babel
-`<script type="text/babel">`
-`const rootEl = document.getElementById("root")`
-`const element = <h1 id="header"> hey there </h1>`
+`<script type="text/babel">`<br />
+`const rootEl = document.getElementById("root")`<br />
+`const element = <h1 id="header"> hey there </h1>`<br />
 `ReactDOM.render(element, rootEl)`
 `</script>`
