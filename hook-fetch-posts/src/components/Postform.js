@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { createPost } from "../actions/postActions";
+import AppContext from "../appcontext";
 
 export default function Postform() {
   // set initital state
@@ -11,6 +12,10 @@ export default function Postform() {
 
   console.log("============= initital state: ", state);
 
+  const dispatch = useContext(AppContext);
+
+  console.log("============= post form: dispatch: ", dispatch);
+
   let onSubmit = e => {
     e.preventDefault(); // prevent submit the form and reload the page
 
@@ -18,12 +23,12 @@ export default function Postform() {
 
     // create post function should be passed from context
 
-    // const post = {
-    //   title: this.state.title,
-    //   body: this.state.body
-    // };
+    const post = {
+      title: state.title,
+      body: state.body
+    };
 
-    // this.props.createPost(post);
+    createPost(post, dispatch);
   };
 
   let onChange = e => {
