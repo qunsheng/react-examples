@@ -10,16 +10,16 @@ export default function Postform() {
     body: ""
   });
 
-  console.log("============= initital state: ", state);
+  //   console.log("============= initital state: ", state);
 
   const dispatch = useContext(AppContext);
 
-  console.log("============= post form: dispatch: ", dispatch);
+  //   console.log("============= post form: dispatch: ", dispatch);
 
   let onSubmit = e => {
     e.preventDefault(); // prevent submit the form and reload the page
 
-    console.log("================ on submit");
+    // console.log("================ on submit");
 
     // create post function should be passed from context
 
@@ -32,9 +32,9 @@ export default function Postform() {
   };
 
   let onChange = e => {
-    console.log("============ on change");
+    // console.log("============ on change");
     setState({ ...state, [e.target.name]: e.target.value });
-    console.log("============= updated state: ", state);
+    // console.log("============= updated state: ", state);
   };
 
   // return what you want to render, similar to render()

@@ -9,16 +9,16 @@ import postReducer from "./reducers/postReducer";
 import AppContext from "./appcontext";
 
 function App() {
-  console.log("============== postReducer: ", postReducer);
-  console.log("============== AppContext: ", AppContext);
+  // console.log("============== postReducer: ", postReducer);
+  // console.log("============== AppContext: ", AppContext);
 
   const [state, dispatch] = useReducer(postReducer, {
     items: [],
     item: {}
   });
 
-  console.log("============== state: ", state);
-  console.log("============== dispatch: ", dispatch);
+  // console.log("============== state: ", state);
+  // console.log("============== dispatch: ", dispatch);
 
   return (
     <div className="App">
