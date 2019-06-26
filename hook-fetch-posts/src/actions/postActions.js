@@ -1,25 +1,21 @@
 // put a list of what to import into import {...}
 import { FETCH_POSTS, NEW_POST } from "./types";
 
-export const fetchPosts = () => {
-  console.log("================ fetch posts");
+// fetch data from backend and dispatch
+export const fetchPosts = dispatch => {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(res => res.json())
+    .then(posts =>
+      // dispatch after fetch data
+      dispatch({
+        type: FETCH_POSTS,
+        payload: posts
+      })
+    );
 };
 
-// export const fetchPosts = () => dispatch => {
-//   fetch("https://jsonplaceholder.typicode.com/posts")
-//     .then(res => res.json())
-//     .then(posts =>
-//       // dispatch after fetch data
-//       dispatch({
-//         type: FETCH_POSTS,
-//         payload: posts
-//       })
-//     );
-// };
-
+// post new post to backend, wait for response back, and then dispatch
 export const createPost = (postData, dispatch) => {
-  console.log("==================== #### create post: ", postData);
-  console.log("==================== #### create post: dispatch: ", dispatch);
   fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     headers: {

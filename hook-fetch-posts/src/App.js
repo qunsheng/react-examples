@@ -1,25 +1,44 @@
-import React, { useReducer, useContext, useEffect, useRef } from "react";
+import React, { useReducer, useEffect, useRef } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import PostForm from "./components/Postform";
-import Posts from "./components/Posts";
+import PostForm from "./components/Postform"; // post form conponent
+import Posts from "./components/Posts"; // post component
 
-import postReducer from "./reducers/postReducer";
-import AppContext from "./appcontext";
+import postReducer from "./reducers/postReducer"; // reducer function
+import AppContext from "./appcontext"; // context created before
+
+import { fetchPosts } from "./actions/postActions"; // fetch postion function
+
+// custom hook
+function useEffectOnce(cb) {
+  //
+  // useRef hook
+  // parameter: initialValue
+  //
+  const didRun = useRef(false);
+
+  useEffect(() => {
+    if (!didRun.current) {
+      cb();
+      didRun.current = true;
+    }
+  });
+}
 
 function App() {
-  // console.log("============== postReducer: ", postReducer);
-  // console.log("============== AppContext: ", AppContext);
-
+  // use useReducer hook to create redux like structure
   const [state, dispatch] = useReducer(postReducer, {
     items: [],
     item: {}
   });
 
-  // console.log("============== state: ", state);
-  // console.log("============== dispatch: ", dispatch);
+  // fetchPost once app started
+  useEffectOnce(() => {
+    fetchPosts(dispatch);
+  });
 
+  // return jsx
   return (
     <div className="App">
       <AppContext.Provider value={dispatch}>
@@ -29,7 +48,7 @@ function App() {
         </header>
         <PostForm />
         <hr />
-        <Posts />
+        <Posts postStateObj={state} />
       </AppContext.Provider>
     </div>
   );
