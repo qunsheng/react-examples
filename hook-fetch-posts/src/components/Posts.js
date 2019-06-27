@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
+import AppContext from "../appcontext";
+import { fetchPosts } from "../actions/postActions";
 
-export default function Posts(props) {
-  // properties will pass to component using props objects
-  const { postStateObj } = props; // desctruct props
+export default function Posts() {
+  const [state, dispatch] = useContext(AppContext);
 
-  const posts = postStateObj.items;
-  const newPost = postStateObj.item;
+  useEffect(() => {
+    fetchPosts(dispatch);
+  }, []);
+
+  const posts = state.items;
+  const newPost = state.item;
 
   if (newPost) {
     posts.unshift(newPost); // add new post to posts list

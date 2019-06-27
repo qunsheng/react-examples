@@ -11,7 +11,7 @@ export default function Postform() {
   });
 
   // get context from provider
-  const dispatch = useContext(AppContext);
+  const [, dispatch] = useContext(AppContext);
 
   const onSubmit = e => {
     e.preventDefault(); // prevent submit the form and reload the page
