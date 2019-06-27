@@ -8,14 +8,11 @@ import Fruit from "./Fruit";
 import Vegetable from "./Vegetable";
 
 function App() {
-  const [fruit, setFruit] = useState("Aaple");
-  const [vegetable, setVegetable] = useState("Tomato");
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1> React Hooks In Context </h1>
+        <h1> React Hooks + Context API = Global State Pattern </h1>
       </header>
 
       <Store>
