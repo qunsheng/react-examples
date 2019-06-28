@@ -40,3 +40,9 @@ create simple main component first, put into App.js
 use context to get shared global state and displatch function <br />
 call useState to set local state <br />
 create form and related functions <br />
+
+### get apixu key
+
+go to www.apixu.com to get a key to access weather data <br />
+
+### finish query function and display result
