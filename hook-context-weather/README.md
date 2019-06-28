@@ -34,3 +34,9 @@ delete logo.csv
 ### Create Main component and put into App.js
 
 create simple main component first, put into App.js
+
+### Wroking with Main.js
+
+use context to get shared global state and displatch function <br />
+call useState to set local state <br />
+create form and related functions <br />
