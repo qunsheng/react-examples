@@ -13,3 +13,24 @@ Fetch data from server <br />
 ### Start project
 
 `yarn start`
+
+### Create store store.js
+
+prepare reducer function <br />
+prepare initital state object <br />
+create context <br />
+use reducer and initial state to call useReducer <br />
+wrap children inside context.Provider, share the state and dispatch function globally <br />
+
+### Modify index.js
+
+wrap app inside conttext.Provider
+
+### Clean up App.js
+
+delete App.css, use index.css for all the css <br />
+delete logo.csv
+
+### Create Main component and put into App.js
+
+create simple main component first, put into App.js
