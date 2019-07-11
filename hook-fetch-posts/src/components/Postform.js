@@ -4,13 +4,13 @@ import { createPost } from "../actions/postActions";
 import AppContext from "../appcontext";
 
 export default function Postform() {
-  // set initital state
+  // set initital state for local
   const [state, setState] = useState({
     title: "",
     body: ""
   });
 
-  // get context from provider
+  // get global dispatch function from context
   const [, dispatch] = useContext(AppContext);
 
   const onSubmit = e => {
