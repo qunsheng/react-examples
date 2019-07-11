@@ -3,7 +3,10 @@ import postReducer from "./reducers/postReducer"; // reducer function
 
 import AppContext from "./appcontext";
 
-function Store({ children }) {
+function Store(props) {
+  // destructuring props object to get props.chidren
+  const { children } = props;
+
   // use useReducer hook to create redux like structure
   const [state, dispatch] = useReducer(postReducer, {
     items: [],
