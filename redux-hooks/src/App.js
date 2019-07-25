@@ -1,12 +1,22 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./redux";
 import "./App.css";
+// Components
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
-function App() {
-  return (
+//
+// use redux provider + redux store to share the golobal state
+// another option: context provider + useReducer
+//
+const App = () => (
+  <Provider store={store}>
     <div className="main">
-      <h1> React Redux Hooks</h1>
+      <TodoInput />
+      <TodoList />
     </div>
-  );
-}
+  </Provider>
+);
 
 export default App;

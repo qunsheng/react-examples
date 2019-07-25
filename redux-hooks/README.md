@@ -3,8 +3,7 @@
 This example utilized following technical sets: <br />
 
 React <br />
-Redux for React<br />
-Hooks<br />
+Redux for React with Hooks (https://react-redux.js.org/api/hooks) <br />
 
 ### Create project
 
@@ -14,6 +13,6 @@ Hooks<br />
 
 `yarn start`
 
-### add redux
+### add redux with hooks (varsion 7.1.0)
 
 `yarn add redux react-redux uuid`
